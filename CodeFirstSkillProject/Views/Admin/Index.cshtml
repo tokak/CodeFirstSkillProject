@@ -1,0 +1,31 @@
+﻿@using CodeFirstSkillProject.Models.Entity
+@model List<Yetenek>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Yetenek</th>
+            <th>Değer</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Aciklama</td>
+                <td>@item.Deger</td>
+                <td><a href="/Admin/Sil/@item.Id" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Admin/YetenekGetir/@item.Id" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>

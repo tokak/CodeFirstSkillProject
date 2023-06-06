@@ -1,0 +1,23 @@
+﻿@using CodeFirstSkillProject.Models.Entity
+@model Yetenek
+@{
+    ViewBag.Title = "YeniYetenek";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div style="margin-bottom:20px;">
+        <label>Yetenek</label>
+        @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-bottom:20px;">
+        <label>Yetenek Derecesi</label>
+        @Html.TextBoxFor(x => x.Deger, new { @class = "form-control" })
+
+    </div>
+    <div>
+        <button class="btn btn-primary">Kaydet</button>
+    </div>
+</form>
+
